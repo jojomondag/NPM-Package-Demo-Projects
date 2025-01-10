@@ -6,11 +6,8 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: {
-      name: 'understandingNpmPackageBrowserJson',
-      type: 'umd',
-      export: 'default'
-    },
+    library: 'understandingNpmPackageBrowserJson',
+    libraryTarget: 'umd',
     globalObject: 'this'
   },
   module: {

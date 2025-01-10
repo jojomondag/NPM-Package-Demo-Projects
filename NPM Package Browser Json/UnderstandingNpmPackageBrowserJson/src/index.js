@@ -1,4 +1,4 @@
 const namesData = require('../@data/names.json');
 
-// Export the names array as default
-export default namesData.names; 
+// Export just the names array
+module.exports = namesData.names; 

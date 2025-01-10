@@ -24,8 +24,8 @@ A demonstration of how to create an NPM package that:
 <script src="https://cdn.jsdelivr.net/npm/understanding-npm-package-browser-json/dist/index.js"></script>
 
 <script>
-    // Access the names array
-    const names = understandingNpmPackageBrowserJson.default;
+    // Access the names array directly
+    const names = understandingNpmPackageBrowserJson;
     
     // Use the names
     names.forEach(name => console.log(name));
