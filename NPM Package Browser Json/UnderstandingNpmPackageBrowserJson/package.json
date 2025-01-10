@@ -1,6 +1,6 @@
 {
   "name": "understanding-npm-package-browser-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple package to display 5 names in a browser",
   "main": "dist/index.js",
   "scripts": {
