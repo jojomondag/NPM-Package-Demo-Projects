@@ -1,12 +1,16 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'displayNames',
-    libraryTarget: 'umd',
+    library: {
+      name: 'understandingNpmPackageBrowserJson',
+      type: 'umd',
+      export: 'default'
+    },
     globalObject: 'this'
   },
   module: {

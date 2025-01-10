@@ -18,9 +18,21 @@ A demonstration of how to create an NPM package that:
 
 ## Usage
 
+### Browser (via CDN)
+```html
+<!-- Import the package -->
+<script src="https://cdn.jsdelivr.net/npm/understanding-npm-package-browser-json/dist/index.js"></script>
+
+<script>
+    // Access the names array
+    const names = understandingNpmPackageBrowserJson.default;
+    
+    // Use the names
+    names.forEach(name => console.log(name));
+</script>
+```
 
 ### Installation
-
 ```bash
 npm install understanding-npm-package-browser-json
 ```
