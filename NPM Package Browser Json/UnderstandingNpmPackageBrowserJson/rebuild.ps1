@@ -1,4 +1,4 @@
-# Script to rebuild and reinstall the display-names package
+# Script to rebuild and reinstall the understanding-npm-package-browser-json package
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 # Ensure we're in the correct directory
@@ -57,7 +57,7 @@ if ($LASTEXITCODE -eq 0) {
 
 # Create a global link for this package
 $host.UI.RawUI.ForegroundColor = "Yellow"
-Write-Output "Creating global link for display-names package..."
+Write-Output "Creating global link for understanding-npm-package-browser-json package..."
 $host.UI.RawUI.ForegroundColor = "White"
 
 npm link
@@ -85,12 +85,12 @@ if (Test-Path "node_modules") {
 # Install dependencies in testing project
 npm install
 
-# Link to the local display-names package
+# Link to the local understanding-npm-package-browser-json package
 $host.UI.RawUI.ForegroundColor = "Yellow"
-Write-Output "Linking to local display-names package..."
+Write-Output "Linking to local understanding-npm-package-browser-json package..."
 $host.UI.RawUI.ForegroundColor = "White"
 
-npm link display-names
+npm link understanding-npm-package-browser-json
 
 if ($LASTEXITCODE -eq 0) {
     $host.UI.RawUI.ForegroundColor = "Green"

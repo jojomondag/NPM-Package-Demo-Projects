@@ -1,17 +1,17 @@
 {
-  "name": "testing-display-names",
+  "name": "testing-understanding-npm-package-browser-json",
   "version": "1.0.0",
-  "description": "Testing environment for display-names package",
+  "description": "Testing environment for understanding-npm-package-browser-json package",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch"
   },
   "dependencies": {
-    "display-names": "file:../UnderstandingNpm"
+    "understanding-npm-package-browser-json": "file:../UnderstandingNpmPackageBrowserJson"
   },
   "devDependencies": {
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }
-} 
+}

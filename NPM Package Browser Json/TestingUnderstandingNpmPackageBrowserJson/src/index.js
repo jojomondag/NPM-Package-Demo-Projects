@@ -1,5 +1,5 @@
 // Import the names from the package
-const names = require('display-names');
+const names = require('understanding-npm-package-browser-json');
 
 // Function to initialize the names display
 function initializeNames() {
