@@ -55,12 +55,19 @@ if ($LASTEXITCODE -eq 0) {
     exit 1
 }
 
+# Create a global link for this package
+$host.UI.RawUI.ForegroundColor = "Yellow"
+Write-Output "Creating global link for display-names package..."
+$host.UI.RawUI.ForegroundColor = "White"
+
+npm link
+
 # Step 4: Change to testing directory and reinstall
 $host.UI.RawUI.ForegroundColor = "Yellow"
 Write-Output "Reinstalling in test environment..."
 $host.UI.RawUI.ForegroundColor = "White"
 
-Set-Location -Path "../TestingUnderstandingNpm"
+Set-Location -Path "../TestingUnderstandingNpmPackageBrowserJson"
 
 # Clean directories in testing project
 if (Test-Path "dist") {
@@ -78,12 +85,19 @@ if (Test-Path "node_modules") {
 # Install dependencies in testing project
 npm install
 
+# Link to the local display-names package
+$host.UI.RawUI.ForegroundColor = "Yellow"
+Write-Output "Linking to local display-names package..."
+$host.UI.RawUI.ForegroundColor = "White"
+
+npm link display-names
+
 if ($LASTEXITCODE -eq 0) {
     $host.UI.RawUI.ForegroundColor = "Green"
-    Write-Output "Installation successful!"
+    Write-Output "Installation and linking successful!"
 } else {
     $host.UI.RawUI.ForegroundColor = "Red"
-    Write-Output "Installation failed!"
+    Write-Output "Installation or linking failed!"
     $host.UI.RawUI.ForegroundColor = "White"
     exit 1
 }
@@ -106,12 +120,12 @@ if ($LASTEXITCODE -eq 0) {
 }
 
 # Return to original directory
-Set-Location -Path "../UnderstandingNpm"
+Set-Location -Path "../UnderstandingNpmPackageBrowserJson"
 
 $host.UI.RawUI.ForegroundColor = "Cyan"
 Write-Output "All done! You can now test your changes."
 $host.UI.RawUI.ForegroundColor = "Yellow"
 Write-Output "IMPORTANT: To see the changes:"
-Write-Output "1. Open TestingUnderstandingNpm/index.html in your browser"
+Write-Output "1. Open TestingUnderstandingNpmPackageBrowserJson/index.html in your browser"
 Write-Output "2. Press Ctrl+F5 to force a complete refresh"
 $host.UI.RawUI.ForegroundColor = "White" 
